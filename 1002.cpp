@@ -7,7 +7,7 @@
 #include "iostream"
 using namespace std;
 
-int getSecSmallNumber(int* array, int array_length);
+int getSecSmallNumber(const int* array, int array_length);
 
 int main(){
     int num_samples;
@@ -28,7 +28,7 @@ int main(){
     return 0;
 }
 
-int getSecSmallNumber(int* array, int array_length){
+int getSecSmallNumber(const int* array, int array_length){
     if (array_length < 2){
         cout << "array length error" << endl;
         return -1;
@@ -61,3 +61,5 @@ int getSecSmallNumber(int* array, int array_length){
 
     return secSmallNum;
 }
+
+//todo 提高思考：在无序序列中寻找第k大数字
